@@ -100,6 +100,39 @@ ul { list-style: none; }
 .mobile-menu.open { display: flex; }
 .mobile-menu a { padding: 14px 24px; font-size: 14px; color: rgba(255, 255, 255, 0.75); border-bottom: 1px solid var(--border-dark); }
 .mobile-menu a:last-child { border-bottom: none; }
+.mobile-dropdown { border-bottom: 1px solid var(--border-dark); }
+.mobile-dropdown-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  font-family: inherit;
+  padding: 14px 24px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+.mobile-dropdown-toggle i {
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+.mobile-dropdown-toggle[aria-expanded="true"] i { transform: rotate(180deg); }
+.mobile-dropdown-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mobile-dropdown.open .mobile-dropdown-panel { max-height: 320px; }
+.mobile-dropdown-panel a {
+  padding: 12px 24px 12px 36px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  border-bottom: 1px solid var(--border-dark);
+  display: block;
+}
+.mobile-dropdown-panel a:last-child { border-bottom: none; }
 
 /* ── 5. FOOTER ──────────────────────────────────────────────── */
 .footer { background: #0a1520; padding: 48px 0 24px; }

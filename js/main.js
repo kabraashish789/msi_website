@@ -10,6 +10,12 @@ function toggleMenu(btn) {
   btn.querySelector('i').className = open ? 'ti ti-x' : 'ti ti-menu-2';
 }
 
+function toggleMobileDropdown(btn) {
+  const wrapper = btn.closest('.mobile-dropdown');
+  const isOpen = wrapper.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
 document.querySelectorAll('.mobile-menu a').forEach(link => {
   link.addEventListener('click', () => {
     document.getElementById('mobileMenu').classList.remove('open');

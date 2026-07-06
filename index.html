@@ -51,7 +51,22 @@
     </div>
     <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
       <a href="about.html">About Us</a>
-      <a href="#products">Products</a>
+
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false" onclick="toggleMobileDropdown(this)">
+          Products
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="mobile-dropdown-panel">
+          <a href="products/brass.html">Brass Scrap</a>
+          <a href="products/copper.html">Copper Scrap</a>
+          <a href="products/bronze.html">Bronze Scrap</a>
+          <a href="products/zinc.html">Zinc Scrap</a>
+          <a href="products/aluminium.html">Aluminium Scrap</a>
+          <a href="products/lead.html">Lead Scrap</a>
+        </div>
+      </div>
+
       <a href="contact.html">Contact</a>
       <a href="contact.html" style="color: var(--gold); font-weight: 500;">Get a Quote →</a>
     </nav>

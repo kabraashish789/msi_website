@@ -28,10 +28,26 @@
     </div>
     <button class="hamburger" onclick="toggleMenu(this)" aria-label="Menu"><i class="ti ti-menu-2"></i></button>
   </nav></div>
-  <nav class="mobile-menu" id="mobileMenu">
-    <a href="../index.html">Home</a>
-    <a href="brass.html">Brass Scrap</a><a href="copper.html">Copper Scrap</a><a href="aluminium.html">Aluminium Scrap</a><a href="zinc.html">Zinc Scrap</a><a href="lead.html">Lead Scrap</a><a href="bronze.html">Bronze Scrap</a>
-    <a href="../contact.html" style="color:var(--gold);font-weight:500">Get a Quote →</a>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="../about.html">About Us</a>
+
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-toggle" aria-expanded="false" onclick="toggleMobileDropdown(this)">
+        Products
+        <i class="ti ti-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="mobile-dropdown-panel">
+        <a href="brass.html">Brass Scrap</a>
+        <a href="copper.html">Copper Scrap</a>
+        <a href="bronze.html">Bronze Scrap</a>
+        <a href="zinc.html">Zinc Scrap</a>
+        <a href="aluminium.html">Aluminium Scrap</a>
+        <a href="lead.html">Lead Scrap</a>
+      </div>
+    </div>
+
+    <a href="../contact.html">Contact</a>
+    <a href="../contact.html" style="color: var(--gold); font-weight: 500;">Get a Quote →</a>
   </nav>
 </header>
 <section class="page-hero" style="--hero-image:url('../images/aluminium_scrap.jpg');">
