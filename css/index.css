@@ -1,0 +1,301 @@
+/* =============================================================
+   index.css — Metal Scrap India
+   Homepage-only styles. Requires global.css loaded first.
+   ============================================================= */
+
+/* ── 1. HERO SECTION ────────────────────────────────────────── */
+.hero {
+  padding-top: 68px;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+}
+.hero-grid-bg {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image: linear-gradient(rgba(212, 168, 67, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 168, 67, 0.6) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.hero-glow {
+  position: absolute; top: -200px; right: -100px; width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212, 168, 67, 0.08) 0%, transparent 70%); pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 380px; align-items: center; gap: 60px; padding: 60px 0 80px; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--gold-dim);
+  border: 1px solid rgba(212, 168, 67, 0.25); color: var(--gold); font-size: 11px;
+  letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 22px;
+}
+.hero-eyebrow i { font-size: 13px; }
+.hero h1 {
+  font-family: var(--font-display); font-size: clamp(34px, 4.5vw, 52px); font-weight: 700;
+  line-height: 1.12; color: var(--white); margin-bottom: 20px; letter-spacing: -0.5px;
+}
+.hero h1 em { color: var(--gold); font-style: normal; }
+.hero-desc { font-size: 16px; color: rgba(255, 255, 255, 0.55); line-height: 1.75; max-width: 480px; margin-bottom: 36px; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-primary {
+  background: var(--gold); color: var(--dark); font-size: 14px; font-weight: 600;
+  padding: 13px 28px; border-radius: var(--radius-sm); display: inline-flex; align-items: center; gap: 7px;
+  transition: background var(--transition), transform var(--transition);
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.2); color: var(--white); font-size: 14px; font-weight: 500;
+  padding: 13px 28px; border-radius: var(--radius-sm); display: inline-flex; align-items: center; gap: 7px;
+  transition: border-color var(--transition), background var(--transition);
+}
+.btn-secondary:hover { border-color: rgba(255, 255, 255, 0.45); background: rgba(255, 255, 255, 0.04); }
+.hero-meta { display: flex; gap: 28px; flex-wrap: wrap; }
+.hero-meta-item { display: flex; align-items: center; gap: 8px; }
+.hero-meta-item i { font-size: 15px; color: var(--gold); }
+.hero-meta-item span { font-size: 12.5px; color: rgba(255, 255, 255, 0.5); }
+
+/* Card Elements */
+.hero-card {
+  background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-lg); padding: 28px;
+}
+.hero-card-header { margin-bottom: 20px; }
+.hero-card-header p { font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 6px; }
+.hero-card-header h3 { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--white); }
+.metal-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+.metal-item {
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-sm); padding: 11px 14px;
+}
+.metal-left { display: flex; align-items: center; gap: 10px; }
+.metal-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.metal-name { font-size: 13px; color: rgba(255, 255, 255, 0.85); }
+.metal-grade { font-size: 11px; color: rgba(255, 255, 255, 0.38); }
+.metal-avail { font-size: 10.5px; font-weight: 500; padding: 3px 9px; border-radius: 20px; background: rgba(74, 222, 128, 0.12); color: #4ade80; }
+.hero-card-cta { width: 100%; background: var(--gold); color: var(--dark); font-size: 13.5px; font-weight: 600; padding: 13px; border-radius: var(--radius-sm); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background var(--transition); }
+.hero-card-cta:hover { background: var(--gold-light); }
+
+/* ── 2. STATS BAR ───────────────────────────────────────────── */
+.stats-bar { background: var(--gold); padding: 0; }
+.stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-item { padding: 20px 28px; text-align: center; border-right: 1px solid rgba(0, 0, 0, 0.12); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--dark); line-height: 1; }
+.stat-label { font-size: 11px; color: rgba(17, 24, 39, 0.6); margin-top: 3px; letter-spacing: 0.3px; }
+
+/* ── 3. GLOBAL FOOTPRINTS (VIDEO IMPLEMENTATION) ────────────── */
+.footprints-section {
+  padding-bottom: 88px; 
+  background-color: var(--white) !important; /* Forces the section background to be white */
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  
+  /* These three lines are the magic for hiding the overlap */
+  overflow: hidden; 
+  border-radius: var(--radius-lg);
+  background-color: var(--white); 
+  
+  /* Kills any invisible HTML whitespace gaps that sometimes render next to videos */
+  font-size: 0; 
+  line-height: 0;
+}
+
+.reach-video {
+  /* We make the video exactly 1% wider than the container */
+  width: 100%; 
+  height: auto;
+  display: block;
+  object-fit: cover;
+  
+  /* We pull the video back to the left by half a percent so it stays perfectly centered */
+  margin-left: 0.5%; 
+  
+  background-color: var(--white);
+}
+
+/* ── 4. PRODUCT CARDS GRID ──────────────────────────────────── */
+.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.prod-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow var(--transition), transform var(--transition); }
+.prod-card:hover { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); transform: translateY(-3px); }
+.prod-thumb { height: 100px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.prod-thumb-icon { font-size: 40px; position: relative; z-index: 1; }
+.prod-body { padding: 18px 20px 20px; }
+.prod-name { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--text-1); margin-bottom: 6px; }
+.prod-desc { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 14px; }
+.prod-grades { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.grade-tag { font-size: 11px; color: var(--dark-3); background: var(--off-white); border: 1px solid var(--border); padding: 3px 10px; border-radius: 20px; }
+.prod-link { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 500; color: var(--gold); transition: gap var(--transition); }
+.prod-card:hover .prod-link { gap: 8px; }
+
+/* ── 5. QUALITY ASSURANCE BLOCK ─────────────────────────────── */
+.qa-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.qa-list { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+.qa-list li { display: flex; gap: 16px; align-items: flex-start; }
+.qa-list i { font-size: 24px; color: var(--gold); background: var(--white); width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); flex-shrink: 0; }
+.qa-list strong { display: block; font-size: 15px; font-weight: 600; color: var(--text-1); margin-bottom: 4px; }
+.qa-list p { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+.qa-visual { width: 100%; height: 100%; }
+.qa-image-placeholder { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-lg); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; text-align: center; color: var(--text-3); }
+.qa-image-placeholder i { font-size: 64px; color: var(--gold-dim); margin-bottom: 16px; }
+.qa-image-placeholder p { font-size: 13px; }
+
+/* ── 6. LIVE MARKET RATES (LIGHT THEME GRID) ────────────────── */
+.market-grid {
+  display: grid;
+  /* Creates a responsive grid: 5 columns on desktop, fewer on smaller screens */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.market-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.market-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--gold);
+}
+.mc-category {
+  font-size: 10.5px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.mc-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.mc-price-row {
+  margin-top: auto; /* Pushes price to the bottom if names span two lines */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed var(--border);
+  padding-top: 12px;
+}
+.mc-price {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.mc-trend {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mc-trend.up { 
+  background: rgba(16, 185, 129, 0.12); 
+  color: #10b981; 
+}
+.mc-trend.down { 
+  background: rgba(239, 68, 68, 0.12); 
+  color: #ef4444; 
+}
+.market-disclaimer{
+    margin-top:24px;
+    font-size:0.88rem;
+    line-height:1.7;
+    color:#6b7280;
+    text-align:center;
+    max-width:900px;
+    margin-inline:auto;
+}
+.market-disclaimer strong{
+    color:#111827;
+}
+
+/* Make it stack nicely on mobile */
+@media (max-width: 600px) {
+  .market-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .market-card {
+    padding: 16px;
+  }
+  .mc-name {
+    font-size: 14px;
+  }
+  .mc-price {
+    font-size: 16px;
+  }
+}
+
+/* ── 7. CERTIFICATIONS STRIP ────────────────────────────────── */
+.certs-strip { padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--white); }
+.certs-inner { display: flex; align-items: center; flex-wrap: wrap; }
+.certs-label { font-size: 11px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: 1.2px; padding-right: 28px; border-right: 1px solid var(--border); margin-right: 28px; white-space: nowrap; }
+.cert-badges { display: flex; gap: 12px; flex-wrap: wrap; }
+.cert-badge { display: flex; align-items: center; gap: 7px; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 14px; font-size: 12.5px; color: var(--text-2); background: var(--off-white); }
+.cert-badge i { font-size: 15px; color: var(--gold); }
+
+/* ── RESPONSIVE — HOMEPAGE ─────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero { min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; padding: 48px 0 56px; }
+  .hero-desc, .hero-card { max-width: 100%; }
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .hero-btns .btn-primary, .hero-btns .btn-secondary { width: 100%; justify-content: center; padding: 14px 20px; }
+  
+  .map-container { padding: 12px; }
+  .map-overlay-svg { top: 12px; left: 12px; width: calc(100% - 24px); height: calc(100% - 24px); }
+  
+  .market-dashboard-grid { grid-template-columns: 1fr; gap: 20px; }
+  .products-grid { grid-template-columns: 1fr 1fr; }
+  .qa-layout { grid-template-columns: 1fr; gap: 40px; }
+  .qa-image-placeholder { min-height: 250px; }
+  .certs-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .certs-label { border-right: none; padding-right: 0; margin-right: 0; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 28px; }
+  .hero-eyebrow { font-size: 10px; }
+  .hero-desc { font-size: 14px; }
+  .hero-meta-item span { font-size: 12px; }
+  .hero-card { padding: 20px; }
+  .hero-card-header h3 { font-size: 15px; }
+  .metal-name { font-size: 12.5px; }
+  .metal-grade { font-size: 10.5px; }
+  .hero-inner { padding: 36px 0 48px; }
+  
+  .map-desc-box { padding: 20px; }
+  .map-desc-box p { font-size: 13.5px; }
+  
+  .products-grid { grid-template-columns: 1fr; gap: 14px; }
+  .prod-thumb { height: 80px; }
+  .prod-thumb-icon { font-size: 32px; }
+  .prod-name { font-size: 15px; }
+  .prod-desc { font-size: 12.5px; }
+  .qa-list { gap: 16px; }
+  .qa-list i { width: 44px; height: 44px; font-size: 20px; }
+  .qa-list strong { font-size: 14px; }
+  .qa-list p { font-size: 12.5px; }
+  
+  .cert-badges { gap: 8px; }
+  .cert-badge { font-size: 11.5px; padding: 7px 12px; }
+}
+@media (max-width: 380px) {
+  .hero h1 { font-size: 24px; }
+  .hero-eyebrow { font-size: 9px; letter-spacing: 1px; padding: 4px 10px; }
+}

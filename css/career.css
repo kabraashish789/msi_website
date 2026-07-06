@@ -1,0 +1,211 @@
+/* =============================================================
+   career.css — Metal Scrap India
+   Styles for Careers page components.
+   Requires global.css loaded first (uses shared CSS variables:
+   --white, --off-white, --dark, --gold, --gold-light, --gold-dim,
+   --green, --text-1, --text-2, --text-3, --border, --radius-sm/md/lg,
+   --font-display, --transition).
+   ============================================================= */
+
+/* ── 1. WHY WORK WITH US — PERKS GRID ───────────────────────── */
+.perks-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.perk-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+.perk-card:hover { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06); border-color: rgba(212, 168, 67, 0.35); }
+.perk-icon {
+  width: 44px; height: 44px; border-radius: var(--radius-md); background: var(--gold-dim);
+  border: 1px solid rgba(212, 168, 67, 0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+}
+.perk-icon i { font-size: 22px; color: var(--gold); }
+.perk-title { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--text-1); margin-bottom: 8px; }
+.perk-text { font-size: 13.5px; color: var(--text-2); line-height: 1.7; }
+
+/* ── 2. DEPARTMENT FILTER TABS ──────────────────────────────── */
+.dept-tabs {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  margin: 8px 0 44px;
+}
+.dept-tab {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px; font-weight: 600;
+  color: var(--text-2);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.dept-tab:hover { border-color: rgba(212, 168, 67, 0.4); color: var(--text-1); }
+.dept-tab.active { background: var(--gold); border-color: var(--gold); color: var(--dark); }
+
+/* ── 3. JOB ACCORDION CARDS ─────────────────────────────────── */
+.jobs-list { display: flex; flex-direction: column; gap: 16px; max-width: 880px; margin: 0 auto; }
+.job-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.job-card:hover { box-shadow: 0 6px 26px rgba(0, 0, 0, 0.07); }
+
+.job-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 28px; cursor: pointer; user-select: none; gap: 16px;
+}
+.job-header-left { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.job-dept-badge {
+  align-self: flex-start;
+  font-size: 11px; font-weight: 600; color: var(--gold);
+  background: var(--gold-dim); padding: 3px 12px; border-radius: 20px;
+}
+.job-title { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--text-1); }
+.job-meta { display: flex; flex-wrap: wrap; gap: 16px; }
+.job-meta span { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; color: var(--text-3); }
+.job-meta i { font-size: 14px; }
+
+.job-toggle {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--off-white); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 15px; color: var(--text-2);
+  transition: transform 0.25s, background var(--transition);
+}
+.job-card.open .job-toggle { transform: rotate(45deg); background: var(--gold-dim); color: var(--gold); }
+
+.job-body { display: none; padding: 0 28px 28px; }
+.job-card.open .job-body { display: block; }
+.job-desc { font-size: 14px; color: var(--text-2); line-height: 1.75; margin-bottom: 22px; }
+
+.job-list-block { margin-bottom: 20px; }
+.job-list-block h4 {
+  font-size: 11px; font-weight: 600; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.job-list-block ul { display: flex; flex-direction: column; gap: 8px; padding-left: 20px; }
+.job-list-block li { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+
+.btn-apply-job {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--gold); color: var(--dark);
+  font-size: 13px; font-weight: 600;
+  padding: 10px 22px;
+  border: none; border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.btn-apply-job:hover { background: var(--gold-light); }
+
+.no-results {
+  text-align: center; font-size: 14px; color: var(--text-3);
+  max-width: 480px; margin: 8px auto 0; line-height: 1.6;
+}
+
+/* ── 4. APPLICATION FORM ────────────────────────────────────── */
+.apply-form-card {
+  max-width: 780px; margin: 0 auto;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 44px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+.form-row .form-group { margin-bottom: 0; }
+.form-group:last-of-type { margin-bottom: 24px; }
+
+.form-group label { font-size: 12.5px; font-weight: 600; color: var(--text-1); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--text-1);
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  width: 100%;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.15);
+}
+.form-group textarea { min-height: 90px; resize: vertical; }
+
+/* Country-code + phone number grouped control */
+.phone-input-group {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--off-white);
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.phone-input-group:focus-within {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.15);
+}
+.country-code-select {
+  flex: 0 0 92px;
+  border: none;
+  border-right: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--white);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 11px 8px;
+  cursor: pointer;
+}
+.country-code-select:focus { outline: none; box-shadow: none; }
+.phone-input-group input {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  flex: 1;
+}
+.phone-input-group input:focus { outline: none; box-shadow: none; }
+
+.resume-note {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: var(--gold-dim); border: 1px solid rgba(212, 168, 67, 0.25);
+  border-radius: var(--radius-sm); padding: 12px 16px;
+  margin-bottom: 22px;
+}
+.resume-note i { font-size: 16px; color: var(--gold); margin-top: 2px; flex-shrink: 0; }
+.resume-note span { font-size: 12.5px; color: var(--text-2); line-height: 1.55; }
+
+.btn-submit {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: var(--dark);
+  font-size: 14px; font-weight: 600;
+  padding: 13px 28px;
+  border: none; border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.btn-submit:hover { background: var(--gold-light); }
+
+/* ── 5. RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .perks-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 780px) {
+  .dept-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+  .dept-tab { flex-shrink: 0; }
+}
+@media (max-width: 600px) {
+  .perks-grid { grid-template-columns: 1fr; gap: 12px; }
+  .perk-card { padding: 20px; }
+  .job-header { padding: 18px 20px; flex-wrap: wrap; }
+  .job-body { padding: 0 20px 22px; }
+  .job-title { font-size: 15.5px; }
+  .apply-form-card { padding: 26px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}

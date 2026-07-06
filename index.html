@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Metal Scrap India — India's trusted non-ferrous metal scrap merchant since 1979. Brass, Copper, Aluminium, Zinc & more. EXIM certified. Based in Jamnagar, Gujarat." />
+  <title>Metal Scrap India | Non-Ferrous Metal Merchants Since 1979</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="Metal Scrap India — Home">
+          <img src="images/logo_gold.png" alt="MSI Logo" class="logo-img"/>
+          <div class="logo-text">
+            <strong>Metal Scrap India</strong>
+            <small>Est. 1979 · Jamnagar</small>
+          </div>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="about.html">About Us</a></li>
+          <li class="has-dropdown"><a href="#products">Products ▾</a><ul class="dropdown">
+            <li><a href="products/brass.html">Brass Scrap</a></li>
+            <li><a href="products/copper.html">Copper Scrap</a></li>
+            <li><a href="products/aluminium.html">Aluminium Scrap</a></li>
+            <li><a href="products/zinc.html">Zinc Scrap</a></li>
+            <li><a href="products/lead.html">Lead Scrap</a></li>
+            <li><a href="products/bronze.html">Bronze Scrap</a></li></ul></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="https://wa.me/918460527433" class="btn-nav-wa" aria-label="Chat on WhatsApp">
+            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> WhatsApp
+          </a>
+          <a href="contact.html" class="btn-nav-quote">Get a Quote</a>
+        </div>
+        <button class="hamburger" aria-label="Open mobile menu" aria-expanded="false" onclick="toggleMenu(this)">
+          <i class="ti ti-menu-2" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="about.html">About Us</a>
+      <a href="#products">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" style="color: var(--gold); font-weight: 500;">Get a Quote →</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ─── HERO ────────────────────────────────────────────── -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              <i class="ti ti-map-pin" aria-hidden="true"></i>
+              Jamnagar, Gujarat • Global Hub for Non-Ferrous Metals
+            </div>
+            <h1>India's Trusted<br /><em>Non-Ferrous Metal</em><br />Merchant</h1>
+            <p class="hero-desc">
+              Over four decades of supplying premium non-ferrous metal scrap sourced from trusted domestic and global markets. Serving foundries, manufacturers, and metal processors across India with reliable quality and consistent supply.
+            </p>
+            <div class="hero-btns">
+              <a href="#products" class="btn-primary">
+                Explore Products <i class="ti ti-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="contact.html" class="btn-secondary">
+                Request a Quote <i class="ti ti-send" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <i class="ti ti-calendar" aria-hidden="true"></i>
+                <span>Established in 1979</span>
+              </div>
+              <div class="hero-meta-item">
+                <i class="ti ti-certificate" aria-hidden="true"></i>
+                <span>EXIM &amp; BME Certified</span>
+              </div>
+              <div class="hero-meta-item">
+                <i class="ti ti-truck-delivery" aria-hidden="true"></i>
+                <span>Pan-India supply</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card fade-up">
+            <div class="hero-card-header">
+              <p>Stock availability</p>
+              <h3>Available for Immediate Supply</h3>
+            </div>
+            <ul class="metal-list" role="list">
+              <li class="metal-item">
+                <div class="metal-left">
+                  <span class="metal-dot" style="background:#f59e0b;" aria-hidden="true"></span>
+                  <div>
+                    <div class="metal-name">Brass Scrap</div>
+                    <div class="metal-grade">Honey • Hairwire • Gun Metal</div>
+                  </div>
+                </div>
+                <span class="metal-avail">In Stock</span>
+              </li>
+              <li class="metal-item">
+                <div class="metal-left">
+                  <span class="metal-dot" style="background:#ef4444;" aria-hidden="true"></span>
+                  <div>
+                    <div class="metal-name">Copper Scrap</div>
+                    <div class="metal-grade">Bare Bright · #1 · Millberry</div>
+                  </div>
+                </div>
+                <span class="metal-avail">In Stock</span>
+              </li>
+              <li class="metal-item">
+                <div class="metal-left">
+                  <span class="metal-dot" style="background:#60a5fa;" aria-hidden="true"></span>
+                  <div>
+                    <div class="metal-name">Bronze Scrap</div>
+                    <div class="metal-grade">Aluminium Bronze • HTB • Cu-Ni</div>
+                  </div>
+                </div>
+                <span class="metal-avail">In Stock</span>
+              </li>
+              <li class="metal-item">
+                <div class="metal-left">
+                  <span class="metal-dot" style="background:#a78bfa;" aria-hidden="true"></span>
+                  <div>
+                    <div class="metal-name">Zinc Scrap</div>
+                    <div class="metal-grade">HZL Ingots • Zinc Pieces • Score</div>
+                  </div>
+                </div>
+                <span class="metal-avail">In Stock</span>
+              </li>
+            </ul>
+            <button class="hero-card-cta" onclick="window.location.href='contact.html'">
+              <i class="ti ti-mail" aria-hidden="true"></i> Send an Enquiry
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── STATS BAR ───────────────────────────────────────── -->
+    <div class="stats-bar" role="region" aria-label="Company statistics">
+      <div class="container">
+        <div class="stats-inner">
+          <div class="stat-item">
+            <div class="stat-num">45+</div>
+            <div class="stat-label">Years in Business</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">50+</div>
+            <div class="stat-label">Metal Grades Available</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">Pan-India</div>
+            <div class="stat-label">Supply Network</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">EXIM</div>
+            <div class="stat-label">Registered Importer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── GLOBAL FOOTPRINTS ───────────────────────────────── -->
+    <section class="section footprints-section" style="background: var(--white);" aria-labelledby="footprints-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <p class="eyebrow">Our Reach</p>
+          <h2 class="section-title" id="footprints-heading">Global Footprints</h2>
+          <p class="section-sub" style="max-width: 720px;">
+            We actively source and import premium non-ferrous scrap from around the globe. Our established network spans the <strong>USA, Europe</strong> (including Germany, Poland, Switzerland, Belgium, Denmark, Austria, and the UK), <strong>Turkey, Cyprus, Saudi Arabia, Singapore, Malaysia</strong>, and the <strong>Philippines</strong>. This extensive footprint ensures a continuous, high-quality supply chain directly to our Jamnagar hub.
+          </p>
+        </div>
+      </div>
+      
+      <div class="map-container fade-up" style="background: var(--white); border: none; box-shadow: none;">
+        <video autoplay loop muted playsinline class="reach-video">
+          <source src="videos/world_map.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- ─── PRODUCTS ────────────────────────────────────────── -->
+    <section class="section section-alt" id="products" aria-labelledby="products-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <p class="eyebrow">Our Products</p>
+          <h2 class="section-title" id="products-heading">Premium Non-Ferrous Metal Scrap</h2>
+          <p class="section-sub">
+            Supplying high-quality non-ferrous scrap sourced from trusted domestic and international markets, with consistent grades, reliable availability, and nationwide delivery.
+          </p>
+        </div>
+        <div class="products-grid">
+          <article class="prod-card fade-up">
+            <img src="images/brass_scrap.jpg">
+            <div class="prod-body">
+              <h3 class="prod-name"><a href="products/brass.html" style="color:inherit">Brass Scrap</a></h3>
+              <p class="prod-desc">
+                Premium brass scrap sourced from trusted domestic and global suppliers, offering consistent quality for foundries and manufacturers.
+              </p>
+              <div class="prod-grades" aria-label="Available grades">
+                <span class="grade-tag">Honey</span>
+                <span class="grade-tag">Gun Metal</span>
+                <span class="grade-tag">Hairwire</span>
+                <span class="grade-tag">Vilaity</span>
+              </div>
+              <a href="products/brass.html" class="prod-link">View all grades <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="prod-card fade-up">
+            <img src="images/copper_scrap.jpg">
+            <div class="prod-body">
+              <h3 class="prod-name"><a href="products/copper.html" style="color:inherit">Copper Scrap</a></h3>
+              <p class="prod-desc">
+                High-grade copper scrap sourced from reliable domestic and international suppliers, ensuring excellent conductivity and consistent quality.
+              </p>
+              <div class="prod-grades" aria-label="Available grades">
+                <span class="grade-tag">Bare Bright</span>
+                <span class="grade-tag">#1 Copper</span>
+                <span class="grade-tag">Millberry</span>
+              </div>
+              <a href="products/copper.html" class="prod-link">View all grades <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="prod-card fade-up">
+            <img src="images/bronze_scrap.jpg">
+            <div class="prod-body">
+              <h3 class="prod-name"><a href="products/bronze.html" style="color:inherit">Bronze Scrap</a></h3>
+              <p class="prod-desc">
+                Specialty copper-based alloys including gun metal bronze, aluminium bronze, high-tensile brass, cupronickel, and other engineering grades.
+              </p>
+              <div class="prod-grades" aria-label="Available grades">
+                <span class="grade-tag">Gun Metal Bronze</span>
+                <span class="grade-tag">Aluminium Bronze</span>
+                <span class="grade-tag">HT Brass</span>
+                <span class="grade-tag">Cupronickel</span>
+              </div>
+              <a href="products/bronze.html" class="prod-link">View all grades <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="prod-card fade-up">
+            <img src="images/zinc2.png">
+            <!-- <div class="prod-thumb" style="background:#f3f4f6;">
+              <span class="prod-thumb-icon" aria-hidden="true">🔋</span>
+            </div> -->
+            <div class="prod-body">
+              <h3 class="prod-name"><a href="products/zinc.html" style="color:inherit">Zinc Scrap</a></h3>
+              <p class="prod-desc">
+                Supplying premium zinc ingots, imported zinc scrap, zinc pieces, taps, handles, and other zinc grades sourced from India and global markets.
+              </p>
+              <div class="prod-grades" aria-label="Available grades">
+                <span class="grade-tag">HZL Ingots</span>
+                <span class="grade-tag">Zinc Pieces</span>
+                <span class="grade-tag">Score</span>
+                <span class="grade-tag">Imported Scrap</span>
+              </div>
+              <a href="products/zinc.html" class="prod-link">View all grades <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="prod-card fade-up">
+            <img src="images/aluminium_scrap.jpg">
+            <div class="prod-body">
+              <h3 class="prod-name"><a href="products/aluminium.html" style="color:inherit">Aluminium Scrap</a></h3>
+              <p class="prod-desc">
+                Quality aluminium scrap sourced globally, including extrusion, UBC, Zorba, turnings, wheel scrap and Taint Tabor grades.
+              </p>
+              <div class="prod-grades" aria-label="Available grades">
+                <span class="grade-tag">UBC</span>
+                <span class="grade-tag">Zorba</span>
+                <span class="grade-tag">Turnings</span>
+                <span class="grade-tag">Taint Tabor</span>
+              </div>
+              <a href="products/aluminium.html" class="prod-link">View all grades <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="prod-card fade-up">
+            <img src="images/lead.webp">
+            <div class="prod-body">
+              <h3 class="prod-name"><a href="products/lead.html" style="color:inherit">Lead Scrap</a></h3>
+              <p class="prod-desc">
+                Reliable supply of soft lead scrap, lead plates, and cable sheathing lead sourced to meet diverse industrial requirements.
+              </p>
+              <div class="prod-grades" aria-label="Available grades">
+                <span class="grade-tag">Soft Lead</span>
+                <span class="grade-tag">Lead Plates</span>
+                <span class="grade-tag">Cable Sheathing</span>
+              </div>
+              <a href="products/lead.html" class="prod-link">View all grades <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── QUALITY ASSURANCE BLOCK ─────────────────────────── -->
+    <section class="section qa-section" aria-labelledby="qa-heading">
+      <div class="container">
+        <div class="qa-layout">
+          <div class="qa-content fade-up">
+            <p class="eyebrow">Guaranteed Purity</p>
+            <h2 class="section-title" id="qa-heading">No guesswork. Just verified metal grades.</h2>
+            <p class="section-sub">
+              Mixed or contaminated scrap can lead to production issues, inconsistent alloys, and unnecessary losses. That's why every lot is carefully inspected, tested, and sorted before it leaves our facility.
+            </p>
+
+            <ul class="qa-list">
+              <li>
+                <i class="ti ti-scan" aria-hidden="true"></i>
+                <div>
+                  <strong>Handheld XRF Metal Analysis</strong>
+                  <p>
+                    Every batch is tested using a handheld XRF analyzer to verify the metal grade and chemical composition, ensuring accurate material identification before dispatch.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <i class="ti ti-hand-stop" aria-hidden="true"></i>
+                <div>
+                  <strong>Rigorous Manual Sorting</strong>
+                  <p>
+                    Our experienced team carefully removes mixed metals, iron contamination, attachments, and non-metallic impurities to deliver cleaner, furnace-ready scrap.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <i class="ti ti-file-certificate" aria-hidden="true"></i>
+                <div>
+                  <strong>Transparent Quality Assurance</strong>
+                  <p>
+                    Every shipment includes accurate weight documentation, and XRF test reports can be provided upon request for complete confidence in the supplied material.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <img src="images/xrf_analyser.jpg" alt="Handheld XRF metal analyzer used for scrap metal testing">
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── LIVE MARKET RATES (REDESIGNED DASHBOARD) ──── -->
+
+
+    <section class="section section-alt live-market-section" aria-labelledby="rates-heading">
+      <div class="container">
+        <div class="section-header centered fade-up">
+          <p class="eyebrow">Market Insights</p>
+          <h2 class="section-title" id="rates-heading">
+            Indicative Market Rates
+          </h2>
+          <p class="section-sub">
+            Reference market prices updated regularly to reflect prevailing market conditions.
+            <br>
+            <strong>Last Updated: <span id="market-date">Loading...</span></strong>
+          </p>
+        </div>
+        
+        <div class="market-grid fade-up">
+          <!-- ▼ -->
+          <!-- ▲ -->
+          <div class="market-card">
+            <div class="mc-category">Brass Scrap</div>
+            <div class="mc-name">Honey Gulf</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹838.00</span>
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+          
+          <div class="market-card">
+            <div class="mc-category">Brass Scrap</div>
+            <div class="mc-name">Honey UK/Europe</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹843.00</span> 
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+
+          <div class="market-card">
+            <div class="mc-category">Brass Scrap</div>
+            <div class="mc-name">Brass Vilaity (Local)</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹800.00</span>
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+
+          <div class="market-card">
+            <div class="mc-category">Zinc Scrap</div>
+            <div class="mc-name">Zinc Plant Pass</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹335.00</span>
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+
+          <div class="market-card">
+            <div class="mc-category">Zinc Scrap</div>
+            <div class="mc-name">Zinc (99.95%)</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹375.00</span>
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+
+          <div class="market-card">
+            <div class="mc-category">Copper Scrap</div>
+            <div class="mc-name">Copper Armature</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹1198.00</span>
+              <span class="mc-trend down">▼</span>
+            </div>
+          </div>
+
+          <div class="market-card">
+            <div class="mc-category">National Futures</div>
+            <div class="mc-name">MCX Copper</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹1284.40</span>
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+
+          <div class="market-card">
+            <div class="mc-category">National Futures</div>
+            <div class="mc-name">MCX Zinc</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹366.90</span>
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+
+          <div class="market-card">
+            <div class="mc-category">Global Exchange</div>
+            <div class="mc-name">Copper LME 3M</div>
+            <div class="mc-price-row">
+              <span class="mc-price">$13380.00</span>
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+
+          <div class="market-card">
+            <div class="mc-category">Currency Market</div>
+            <div class="mc-name">Dollar to INR</div>
+            <div class="mc-price-row">
+              <span class="mc-price">₹95.22</span>
+              <span class="mc-trend up">▲</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="market-disclaimer">
+        * Prices shown are indicative only and may change without prior notice due to market fluctuations, material specifications, and prevailing trading conditions. Please contact us for the latest quotation.
+      </div>
+    </section>
+
+    <!-- ─── CERTIFICATIONS STRIP ────────────────────────────── -->
+    <div class="certs-strip" role="region" aria-label="Certifications and memberships">
+      <div class="container">
+        <div class="certs-inner">
+          <span class="certs-label">Memberships &amp; Certs</span>
+          <div class="cert-badges">
+            <span class="cert-badge"><i class="ti ti-award" aria-hidden="true"></i> BME Member</span>
+            <span class="cert-badge"><i class="ti ti-world" aria-hidden="true"></i> EXIM Registered</span>
+            <span class="cert-badge"><i class="ti ti-shield-check" aria-hidden="true"></i> GST Verified</span>
+            <span class="cert-badge"><i class="ti ti-recycle" aria-hidden="true"></i> ISRI Compliant</span>
+            <span class="cert-badge"><i class="ti ti-calendar" aria-hidden="true"></i> Est. 1979</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <img src="images/logo_gold.png" alt="MSI Logo" class="logo-img"/>
+            <div class="logo-text">
+              <strong>Metal Scrap India</strong>
+              <small>Est. 1979</small>
+            </div>
+          </div>
+          <p>Non-ferrous metal scrap merchants based in Jamnagar, Gujarat. Serving India since 1979 with quality, trust, and reliability.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products/brass.html">Brass Scrap</a></li>
+            <li><a href="products/copper.html">Copper Scrap</a></li>
+            <li><a href="products/aluminium.html">Aluminium Scrap</a></li>
+            <li><a href="products/zinc.html">Zinc Scrap</a></li>
+            <li><a href="products/lead.html">Lead Scrap</a></li>
+            <li><a href="products/bronze.html">Bronze Scrap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="career.html">Career</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fas fa-phone" style="color: gray; font-size:x-small; "></i><a> </a><a href="tel:+919426996612">+91 94269 96612</a></li>
+            <li><i class="fas fa-phone" style="color: gray; font-size:x-small; "></i><a> </a><a href="tel:+918460527433">+91 84605 27433</a></li>
+            <li><i class="fa-solid fa-envelope" style="color:gray; font-size:x-small;"></i><a> </a><a href="mailto:info@metalscrapindia.in">info@metalscrapindia.in</a></li>
+            <li><i class="fa-solid fa-envelope" style="color:gray; font-size:x-small;"></i><a> </a><a href="mailto:metalscrap.348@gmail.com">metalscrap.348@gmail.com</a></li>
+            <li><a href="contact.html">Jamnagar, Gujarat</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Metal Scrap India. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918460527433" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

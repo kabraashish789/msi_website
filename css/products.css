@@ -1,0 +1,116 @@
+/* =============================================================
+   products.css — Metal Scrap India
+   Product detail pages (brass, copper, aluminium, zinc, lead,
+   bronze). Requires global.css loaded first.
+   ============================================================= */
+
+
+.page-hero{
+    position:relative;
+    padding:120px 0;
+    color:#fff;
+
+    background:
+        linear-gradient(
+            rgba(10,20,30,0.65),
+            rgba(10,20,30,0.65)
+        ),
+        var(--hero-image);
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* ── 1. GRADES SECTION LAYOUT ───────────────────────────────── */
+.grades-section { padding: 72px 0; }
+.grades-section h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--text-1); margin-bottom: 6px; }
+.grades-intro { font-size: 15px; color: var(--text-2); margin-bottom: 44px; max-width: 620px; line-height: 1.7; }
+.page-layout { display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: start; }
+
+/* ── 2. GRADE ACCORDION CARDS ───────────────────────────────── */
+.grade-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 20px; transition: box-shadow 0.2s; }
+.grade-card:hover { box-shadow: 0 6px 28px rgba(0, 0, 0, 0.09); }
+.grade-header { display: flex; align-items: center; justify-content: space-between; padding: 22px 26px; cursor: pointer; user-select: none; gap: 12px; }
+.grade-header-left { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0; }
+.grade-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.grade-name { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--text-1); }
+.grade-also { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+.grade-badge { font-size: 11.5px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: var(--gold-dim); color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+.grade-toggle { font-size: 18px; color: var(--text-3); transition: transform 0.25s; flex-shrink: 0; }
+.grade-card.open .grade-toggle { transform: rotate(45deg); }
+.grade-body { display: none; padding: 0 26px 26px; }
+.grade-card.open .grade-body { display: block; }
+.grade-desc { font-size: 14px; color: var(--text-2); line-height: 1.75; margin-bottom: 20px; }
+
+/* ── 3. COMPOSITION BARS ────────────────────────────────────── */
+.comp-title { font-size: 11px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.comp-bar-wrap { margin-bottom: 10px; }
+.comp-label-row { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.comp-label { font-size: 12.5px; color: var(--text-2); }
+.comp-pct { font-size: 12.5px; font-weight: 600; color: var(--text-1); }
+.comp-bar-bg { height: 7px; background: #f0f0f0; border-radius: 4px; overflow: hidden; }
+.comp-bar-fill { height: 100%; border-radius: 4px; }
+
+/* ── 4. APPLICATIONS TAGS ───────────────────────────────────── */
+.grade-uses { margin-top: 18px; }
+.grade-uses-title { font-size: 11px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.uses-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.use-tag { font-size: 12px; color: var(--text-2); background: var(--off-white); border: 1px solid var(--border); padding: 4px 11px; border-radius: 20px; }
+
+/* ── 5. GRADE ENQUIRY BUTTON ────────────────────────────────── */
+.grade-cta { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); }
+.btn-enquire { display: inline-flex; align-items: center; gap: 7px; background: var(--gold); color: var(--dark); font-size: 13px; font-weight: 600; padding: 10px 22px; border-radius: var(--radius-sm); transition: background 0.2s; }
+.btn-enquire:hover { background: var(--gold-light); }
+
+/* ── 6. SIDEBAR ─────────────────────────────────────────────── */
+.sidebar { position: sticky; top: 88px; }
+.sidebar-card { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; margin-bottom: 18px; }
+.sidebar-card h3 { font-family: var(--font-display); font-size: 15px; font-weight: 600; margin-bottom: 14px; }
+.sidebar-links { display: flex; flex-direction: column; gap: 2px; }
+.sidebar-links a { font-size: 13px; color: var(--text-2); padding: 8px 10px; border-radius: var(--radius-sm); transition: background 0.15s, color 0.15s; display: flex; align-items: center; gap: 8px; }
+.sidebar-links a:hover { background: #e8e4da; color: var(--text-1); }
+.sidebar-links a.active-page { background: #e8e4da; color: var(--text-1); font-weight: 500; }
+.contact-box { background: var(--dark); border-radius: var(--radius-lg); padding: 22px; }
+.contact-box h3 { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+.contact-box p { font-size: 12.5px; color: rgba(255, 255, 255, 0.45); margin-bottom: 16px; line-height: 1.6; }
+.btn-wa { display: flex; align-items: center; justify-content: center; gap: 7px; background: #25d366; color: var(--white); font-size: 13px; font-weight: 500; padding: 10px; border-radius: var(--radius-sm); margin-bottom: 8px; transition: opacity var(--transition); }
+.btn-wa:hover { opacity: 0.9; }
+.btn-quote { display: flex; align-items: center; justify-content: center; gap: 7px; background: var(--gold); color: var(--dark); font-size: 13px; font-weight: 600; padding: 10px; border-radius: var(--radius-sm); transition: background var(--transition); }
+.btn-quote:hover { background: var(--gold-light); }
+
+/* ── 7. PROCESS SECTION (How It Works) ──────────────────────── */
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.process-steps::before { content: ''; position: absolute; top: 26px; left: 12.5%; right: 12.5%; height: 1px; background: var(--border); z-index: 0; }
+.process-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+.step-num {
+  width: 52px; height: 52px; border-radius: 50%; background: var(--white);
+  border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--gold);
+}
+.step-title { font-size: 14px; font-weight: 600; color: var(--text-1); margin-bottom: 6px; }
+.step-desc { font-size: 12.5px; color: var(--text-2); line-height: 1.6; }
+
+/* ── 8. RESPONSIVE — PRODUCT PAGES ─────────────────────────── */
+@media (max-width: 900px) {
+  .page-layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .process-steps::before { display: none; }
+}
+@media (max-width: 600px) {
+  .grades-section { padding: 48px 0; }
+  .grade-header { padding: 16px 18px; }
+  .grade-body { padding: 0 18px 20px; }
+  .grade-badge { display: none; }
+  .grade-name { font-size: 15px; }
+  .grade-desc { font-size: 13px; }
+  .grade-also { font-size: 11px; }
+  .comp-label, .comp-pct { font-size: 12px; }
+  .grades-intro { font-size: 14px; margin-bottom: 28px; }
+  .process-steps { grid-template-columns: 1fr; gap: 24px; }
+  .process-step { padding: 0 8px; }
+  .step-num { width: 44px; height: 44px; font-size: 15px; }
+  .step-title { font-size: 13.5px; }
+  .step-desc { font-size: 12px; }
+}
